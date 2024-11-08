@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int x,y,*pointer1,*pointer2;
+    x=22;
+    pointer1=&x;
+    printf("x is %d,y is %d,pointer1 is %d\n",x,y,*pointer1);
+    y=*pointer1;
+    printf("x is %d,y is %d,pointer1 is %d\n",x,y,*pointer1);
+    pointer2=&y;
+    printf("x is %d,y is %d,pointer2 is %d\n",x,y,*pointer2);
+    return 0;
+}

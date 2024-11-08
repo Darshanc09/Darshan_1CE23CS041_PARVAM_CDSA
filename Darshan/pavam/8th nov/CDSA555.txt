@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+char* removeDuplicates(char* s) {
+    bool exists[256] = { false };
+    int index = 0;
+    int length = strlen(s);
+    for (int i = 0; i < length; i++) {
+        char c = s[i];
+        if (!exists[(unsigned char)c]) {
+            s[index++] = c;
+            exists[(unsigned char)c] = true;
+        }
+    }
+    s[index] = '\0';
+
+    return s;
+}
+int main() {
+    char s[] = "geeksforgeeks";
+    printf("%s\n", removeDuplicates(s));
+    return 0;
+}
